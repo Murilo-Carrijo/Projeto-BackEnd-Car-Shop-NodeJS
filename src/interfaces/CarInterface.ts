@@ -2,7 +2,7 @@ import { z } from 'zod';
 import VehicleSchama from './VehicleInterface';
 
 const CarSchama = VehicleSchama.extend({
-  doorsQty: z.number().gte(2).or(z.number().lte(4)),
+  doorsQty: z.number().gte(2).and(z.number().lte(4)),
   seatsQty: z.number().gte(2).and(z.number().lte(7)),
 });
 
