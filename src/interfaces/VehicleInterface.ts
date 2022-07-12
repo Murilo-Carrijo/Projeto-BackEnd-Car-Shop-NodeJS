@@ -6,7 +6,7 @@ const VehicleSchama = z.object({
     .gt(1900, { message: 'Release year must be greater than 1900' })
     .lte(2022, { message: 'Release year must be less than 2022' }),
   color: z.string().min(3, { message: 'Must be 3 or more characters long' }),
-  status: z.optional(z.string()),
+  status: z.optional(z.boolean()),
   buyValue: z.number().int().positive(),
 });
 
