@@ -13,6 +13,11 @@ class CarService {
     const car = await this.carModel.create(newCar);
     return car;
   }
+
+  public async read(): Promise<Car[]> {
+    const cars = await this.carModel.read();
+    return cars;
+  }
 }
 
 export default CarService;

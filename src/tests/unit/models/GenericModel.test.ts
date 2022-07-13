@@ -9,7 +9,7 @@ const id = new Types.ObjectId();
 
 const carModel = new CarModel();
 
-describe('Car Model', () => {
+describe('Teste para a GenericModel', () => {
   describe ('Metodo create', () => {
     before(() => {
       sinon.stub(Model, 'create').resolves(carMockSuccess);

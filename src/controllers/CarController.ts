@@ -14,6 +14,16 @@ class CarController {
       next(e);
     }
   }
+
+  public async read(req: Request, res: Response, next: NextFunction)
+    : Promise<Response | void> {
+    try {
+      const cars = await this.carService.read();
+      return res.status(200).json(cars);
+    } catch (e) {
+      next(e);
+    }
+  }
 }
 
 export default CarController;
