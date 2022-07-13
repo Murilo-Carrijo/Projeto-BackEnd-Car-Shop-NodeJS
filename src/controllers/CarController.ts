@@ -24,6 +24,17 @@ class CarController {
       next(e);
     }
   }
+
+  public async readOne(req: Request, res: Response, next: NextFunction)
+    : Promise<Response | void> {
+    try {
+      const { id } = req.params;
+      const cars = await this.carService.readOne(id);
+      return res.status(200).json(cars);
+    } catch (e) {
+      next(e);
+    }
+  }
 }
 
 export default CarController;
