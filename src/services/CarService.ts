@@ -3,6 +3,7 @@ import CarModel from '../models/CarModel';
 import BadRequest from '../errors/BadRequest';
 import NotFound from '../errors/NotFound';
 
+export const model = new CarModel();
 class CarService {
   constructor(private carModel = new CarModel()) {}
 
