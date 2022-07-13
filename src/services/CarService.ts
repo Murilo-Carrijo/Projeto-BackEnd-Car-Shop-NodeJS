@@ -21,7 +21,6 @@ class CarService {
   }
 
   public async readOne(id: string): Promise<Car | null> {
-    console.log(id.length);
     if (id.length < 24) {
       throw new BadRequest('Id must have 24 hexadecimal characters');
     }

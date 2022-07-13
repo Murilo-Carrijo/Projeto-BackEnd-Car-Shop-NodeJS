@@ -13,7 +13,6 @@ export const carSchema = new Schema<Cars>({
   doorsQty: Number,
   seatsQty: Number,
 });
-
 class CarModel extends GenericModel<Car> {
   constructor(private model = createModel('Carros', carSchema)) {
     super(model);
